@@ -1,0 +1,8 @@
+# Create User
+curl -i -X POST http://localhost:12000/users --header "Content-Type: application/json" -d "{\"username\":\"chauhan\", \"password\":\"securepassword\", \"fullname\":\"Harmanpreet Chauhan\", \"email\":\"chauhan@yahoo.com\"}"
+# User login
+curl -i -X POST http://localhost:12000/sessions --header "Content-Type: application/json" -d "{\"username\":\"harman\", \"password\":\"123456\"}"
+# Ein Kartenpaket zum Stack hinzufügen
+curl -i -X POST http://localhost:12000/users/anthony/stack/add-package --header "Content-Type: application/json" --header "Authorization: Bearer chauhan-debug"
+# Ein Deck aus dem Stack auswählen
+curl -i -X POST http://localhost:12000/users/anthony/deck/choose --header "Content-Type: application/json" --header "Authorization: Bearer chauhan-debug"
